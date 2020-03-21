@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Virus Simulator</title>
+
+	<link rel="stylesheet" href="simulator-style.css"/>
+</head>
+<body>
+	<h1>Virus Simulator Demo</h1>
+	<div id="control-panel">
+		<button id="start-button">Start Simulation</button>
+		<button id="reset-button">Reset</button>
+	</div>
+	<div id="Population-input">
+		<label class="input-label" for="popSlider">
+                Population
+        </label>
+		<div class="slide-container">
+        	<input type="range" min="1" max="200" value="10" class="pop-slider" id="popSlider">
+        	<p>Value: <span id="output"></span></p>
+    	</div>
+    </div>
+	<div id="view-panel" class="display"></div>
+	<script src="simulation.js"></script>
+</body>
+</html>
