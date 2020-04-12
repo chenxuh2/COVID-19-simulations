@@ -1,0 +1,618 @@
+-0.797+.9*(3+.9*(17.5)+0.797)
+17.5+.9*(20+.9*(0)-17.5)
+exp(0.8*1.15) / (exp(0.8*1.15) + exp(0))
+574/640
+exp(0.35)
+exp(.2)
+exp(.02)
+log(1.6)
+log(1.4)
+log(1.1)
+log(.1)
+exp(-0.35)
+exp(1)
+exp(0)
+exp(0.1)
+exp(0.2)
+exp(0.78)
+exp(2.25)
+.5^15
+13/20
+.5 * .5 + .5*.5*.5
+total <- 20#
+# create progress bar#
+pb <- txtProgressBar(min = 0, max = total, style = 3)#
+for(i in 1:total){#
+   Sys.sleep(0.1)#
+   # update progress bar#
+   setTxtProgressBar(pb, i)#
+}#
+close(pb)
+log2(1)
+log2(2)
+(1/5) * log2(6/5) * 5
+a <-c(rep(0, 50))# sets the 5th element of the vector to 3 and the 13th element of the vector to 45a[5] <- 3a[13] <- 45# creates a vector, non_zero, that contains the non-zero indices of vector anon_zero <-c(which(a!=0, arr.ind = TRUE))# get the index of the first element in a that is non-zero from the vector non_zeronon_zero_index <-c(which(non_zero!=0, arr.ind = TRUE))
+non_zero_index
+a <-c(rep(0, 50))
+a[5] <- 3
+a[13] <- 45
+non_zero <-c(which(a!=0, arr.ind = TRUE))
+non_zero_index <-c(which(non_zero!=0, arr.ind = TRUE))
+non_zero_index
+a​ <- rep(0,50)
+nonzero​ <- c(​a​) != 0
+nonzero
+returnfirstelement ​<- which​(nonzero​ != 0)
+returnfirstelement
+pexp(1)
+pexp(0)
+pexp(1)
+pexp(0)
+1-exp(-1)
+1-exp(1)
+pexp(1*1)
+pexp(0.5*1)
+pexp(20*1)
+pexp(10*1)
+pexp(-1)
+2^(20*19/2)
+80/5
+0.49 *1 + 0.26 * 2 + 0.12 * 3 + 0.04 * 5 + 0.04 * 5 + 0.03 * 5 + 0.02 * 5
+log2(2)
+log2(0.25)
+log2(0.75)
+0.5 - log2(0.75) * 0.75
+log2(0.5)
+log2(3) + log2(1/3)
+log(3) + log(1/3)
+log(2)
+log2(2)
+log2(3) - log2(1/2)
+log2(3) - 1
+2^2.91
+2^3.11
+56 + 54 + 55 + 55 + 52 + 54 + 55 + 53 + 54
+488/9
+488/9 + 63.5
+56 + 64
+(55 + 54 + 56 + 54 + 55 + 54 + 54 + 49 + 52 + 55 + 55 + 52)/12 + 42.5
+(56 + 54 + 55 + 55 + 56 + 49 + 53 + 52 + 54 + 55 + 53 + 54)/12 + 43.5
+(56 + 56 + 52 + 56 + 56 + 56 + 56 + 55 + 56 + 54)/10 + 44
+(56 + 53 + 56 + 56 + 56 + 55 + 56 + 49 + 56 + 56 + 56)/11 + 42
+(54 + 51 + 55 + 56 + 55 + 55 + 56 + 55 + 56)/9 + 44
+rnorm
+?sample
+sample(1, 10)
+sample(1, 10, replace=T)
+sample(c(0,1), 10, replace=T)
+format <- sample(c(0,1), J)
+level <- rep(1:4, each=3)
+set.seed(8675309)
+format <- sample(c(0,1), J)
+level <- rep(1:4, each=3)
+level
+level <- rep(rep(1:4, each=3), J)
+level
+format <- sample(c(0,1),J)
+format <- sample(c(0,1),J, replace=T)
+format
+sub.format <- rep(format, each=12)
+sub.level <- rep(rep(1:4, each=3), J)
+sub.format
+beta.gm.vec <- rep(beta.gm, 3)
+beta.format <- -7
+beta.format.vec <- rep(beta.format, 3)
+beta.level.vec <- c(beta.level.min, beta.level.mod, beta.level.ext)
+beta.format.vec <- rep(beta.format, 3)
+beta.level.ext <- -3
+beta.level.mod <- -1
+beta.level.min <- -0.2
+beta.level.vec <- c(beta.level.min, beta.level.mod, beta.level.ext)
+beta.gm <- 0
+beta.gm.vec <- rep(beta.gm, 3)
+Beta <- as.matrix(cbind(beta.gm.vec, beta.format.vec, beta.level.vec))
+Beta
+data <- cbind(rep(1, nrow(sub.format)), sub.format, sub.level)
+format <- sample(c(0,1),J, replace=T)
+sub.format <- rep(format, each=12)
+sub.level <- rep(rep(1:4, each=3), J)
+data <- cbind(rep(1, nrow(sub.format)), sub.format, sub.level)
+data <- cbind(rep(1, length(sub.format)), sub.format, sub.level)
+data
+y <- rep(NA, nrow(data))
+y
+for(i in 1:nrow(data)) {
+for(i in 1:nrow(data)) {#
+	y[i] <- Beta %*% data[i,]#
+}
+}}
+for(i in 1:nrow(data)) {#
+	y[i] <- Beta %*% data[i,]#
+}
+warnings()
+data[1,]
+Beta
+beta.format.vec <- c(0, rep(beta.format, 3))
+beta.level.vec <- c(0, beta.level.min, beta.level.mod, beta.level.ext)
+Beta <- as.matrix(cbind(beta.gm.vec, beta.format.vec, beta.level.vec))
+beta.gm.vec <- rep(beta.gm, 4)
+Beta <- as.matrix(cbind(beta.gm.vec, beta.format.vec, beta.level.vec))
+Beta
+data$level
+data
+data$sub.level
+data[,3]
+Beta[data[,3]]
+Beta[data[,3],]
+nrow
+nrow(data)
+Beta[data[1,3],]
+Beta[data[5,3],]
+y <- rep(NA, nrow(data))
+for(i in 1:nrow(data)) {#
+	y[i] <- Beta[data[i,3],] %*% data[i,]#
+}
+y
+rnorm(1,0,1)
+rnorm(10,0,1)
+y <- rep(NA, nrow(data))
+for(i in 1:nrow(data)) {#
+	y[i] <- Beta[data[i,3],] %*% data[i,] + rnorm(1, 0,1)#
+}
+y
+df <- cbind(data, y)
+df
+colnames(df) <- c('intercept', 'format', 'level', 'centeredDV')
+df
+getwd()
+setwd("Documents/GitHub/COVID-19-simulations/replication")
+getwd()
+write.csv(df, "fake-data.csv")
+library(rstanarm)
+fit <- stan_glm(y ~ format + level + format:level,
+)
+fit <- stan_glm(y ~ format + level + format:level, #
+						data=df,#
+						family='gaussian',#
+						chains=4,#
+						cores=4, #
+						iter=2000,#
+						warmup=800)
+df <- as.data.frame(df)
+df
+fit <- stan_glm(y ~ format + level + format:level, #
+						data=df,#
+						family='gaussian',#
+						chains=4,#
+						cores=4, #
+						iter=2000,#
+						warmup=800)
+library(shinystan)
+launch_shinystan(fit)
+df$format <- as.factor(df$format)
+df
+df$format
+df$level
+df$level <- as.factor(df$level)
+df$level
+fit <- stan_glm(y ~ format + level + format:level, #
+				data=df,#
+				family='gaussian',#
+				chains=4,#
+				cores=4, #
+				iter=2000,#
+				warmup=800)
+launch_shinystan(fit)
+set.seed(8675309)
+J <- 500 #number of subjects
+format <- sample(c(0,1),J, replace=T)
+sub.format <- rep(format, each=12)
+sub.level <- rep(rep(1:4, each=3), J)
+beta.gm <- 0
+beta.gm.vec <- rep(beta.gm, 4)
+beta.format <- -7
+beta.format.vec <- c(0, rep(beta.format, 3))
+beta.level.ext <- -3
+beta.level.mod <- -1
+beta.level.min <- -0.2
+beta.level.vec <- c(0, beta.level.min, beta.level.mod, beta.level.ext)
+Beta <- as.matrix(cbind(beta.gm.vec, beta.format.vec, beta.level.vec))
+data <- cbind(rep(1, length(sub.format)), sub.format, sub.level)
+y <- rep(NA, nrow(data))
+for(i in 1:nrow(data)) {
+for(i in 1:nrow(data)) {#
+	y[i] <- Beta[data[i,3],] %*% data[i,] + rnorm(1, 0,1)#
+}
+}
+for(i in 1:nrow(data)) {#
+	y[i] <- Beta[data[i,3],] %*% data[i,] + rnorm(1, 0,1)#
+}
+y
+options(scipen=999)
+y
+df <- cbind(data, y)
+colnames(df) <- c('intercept', 'format', 'level', 'centeredDV')
+setwd("Documents/GitHub/COVID-19-simulations/replication")
+getwd()
+write.csv(df, "fake-data.csv")
+df <- as.data.frame(df)
+df$format <- as.factor(df$format)
+df$level <- as.factor(df$level)
+nrow
+nrow(df)
+fit <- stan_glm(y ~ format + level + format:level, #
+				data=df,#
+				family='gaussian',#
+				chains=4,#
+				cores=4, #
+				iter=2000,#
+				warmup=800)
+launch_shinystan(fit)
+library(rstan)#
+library(extrafont)#
+loadfonts()#
+#
+rstan_options(auto_write = TRUE)#
+options(mc.cores = parallel::detectCores())#
+#
+library(shinystan)#
+library(ggplot2)#
+library(dplyr)#
+#
+# between subject variable: presentation format (interactive, static)#
+# within subject variable: level of social distancing (4)#
+#
+# Y_i = beta_{intercept} + beta_{format} * X_{i,format} + beta_{level} * X_{i, level} + beta_{format*level}*X_{i,format}*X_{i,level}#
+#
+# Constraint #
+transform <- function(x) {#
+	y <- 10 *(1/ (1+ exp(x)))#
+	return(y)#
+}#
+#
+# Let's try to simulate some data#
+set.seed(8675309)#
+K <- 4#
+J <- 50 #number of subjects#
+#
+# format #
+# 0 is static, 1 is interactive#
+format <- sample(c(0,1),J, replace=T)#
+sub.format <- rep(format, each=12)#
+#
+# level#
+sub.level <- rep(rep(1:4, each=3), J)#
+# item #
+item <- rep(1:12, J)#
+#
+# set a baseline#
+# static group rating none social distancing (level 1)#
+#
+# let's assume some intercept value #
+beta.gm <- 5#
+beta.gm.vec <- rep(beta.gm, 4)#
+#
+# let's assume that interactive group has a rating that is lower by 2#
+beta.format <- -2#
+beta.format.vec <- c(0, rep(beta.format, 3))#
+#
+# let's assume that level 4: extensive social distancing #
+# has a rating that is lower by 3#
+beta.level.ext <- -3#
+#
+# level 3: moderate social distancing #
+# has a rating that is lower by 1#
+beta.level.mod <- -1#
+#
+# level 2: minor social distancing#
+# has a rating that is lower by 0.2#
+beta.level.min <- -0.2#
+#
+beta.level.vec <- c(0, beta.level.min, beta.level.mod, beta.level.ext)#
+#
+Beta <- as.matrix(cbind(beta.gm.vec, beta.format.vec, beta.level.vec))#
+#
+data <- cbind(rep(1, length(sub.format)), sub.format, sub.level)#
+#
+y <- rep(NA, nrow(data))#
+for(i in 1:nrow(data)) {#
+	y[i] <- transform(Beta[data[i,3],] %*% data[i,] + rnorm(1, 0,1))#
+}#
+#
+N <- length(y)#
+# uninormal
+fd <- list(K = K, N = N, y = y, format = sub.format, level = sub.level)
+setwd("~/Documents/GitHub/COVID-19-simulations/replication")
+fit <- stan(file='model.stan',#
+            data=fd,#
+            warmup = 800,#
+            iter = 2000,#
+            chains = 4)
+rstan::stan_version()
+library(rstan)#
+library(extrafont)#
+loadfonts()#
+rstan_options(auto_write = TRUE)#
+options(mc.cores = parallel::detectCores())#
+softmax <- function(beta) {#
+    e <- exp(beta)#
+#
+    return(e / sum(e))#
+}#
+#
+##########################################################################
+## Now let's simulate a large data set and analyze it in Stan.#
+#
+##N <- 900#
+D <- 4 ## number of columns#
+K <- 3 ## number of choices#
+M <- 4 ## number of items#
+#
+J <- 500 ## number of subjects#
+#
+N <- J * (M - 1)  # number of data points#
+#
+## Baseline is for decoy at B, mean age, mean education#
+#
+betaD <- log(0.1)  ## option D chosen at rate 0.1 times option B#
+betaA <- log(0.7)  ## option A chosen at rate 0.7 times option B#
+betaB <- log(1)    ## B is reference category#
+#
+betaBaseline <- c(betaD, betaA, betaB)#
+#
+## Effect of changing the decoy from B to A#
+betaDdecoy <- log(1)     ## no change in decoy relative to B#
+betaAdecoy <- log(1.6)   ## 60% increase in log odds of choosing A over B#
+betaBdecoy <- log(1)     ## B is reference category#
+#
+betaDecoy <- c(betaDdecoy, betaAdecoy, betaBdecoy)#
+Beta <- as.matrix(cbind(betaBaseline, betaDecoy))#
+rownames(Beta) <- c('D', 'A', 'B')#
+#
+## Effect of items#
+sigmaW <- 0.3#
+itemAdj <- rnorm(M, 0, sigmaW)#
+## Effect of subject individual differences#
+sigmaU <- 0.5#
+subAdj <- rnorm(J, 0, sigmaU)#
+#
+## FAKE DATA#
+#
+intercept <- rep(1, N)#
+decoyPosition <- rep(c(0, 1), N / 2)#
+#
+## item numbers#
+item <- c()#
+for (n in 1:J) {#
+	 item <- c(item, sample.int(2,1), c(3:M))#
+}#
+## subject id#
+id <- rep(1:J, each=(M-1))#
+#
+X <- cbind(id, item, intercept, decoyPosition)#
+#
+p <- matrix(nrow= N, ncol = K)#
+#
+choices <- rep(NA, N)#
+# [X[n,][1]] = X[n, "id"]#
+#
+for (n in 1:N) {#
+   ## lambda.d <- (subAdj[X[n, "id"]] + itemAdj[X[n, "item"]] + Beta["D","betaDecoy"]) * X[n, "decoyPosition"] + Beta["D", "betaBaseline"] * X[n, "intercept"]#
+   ## lambda.a <- (subAdj[X[n, "id"]] + itemAdj[X[n, "item"]] + Beta["A", "betaDecoy"]) * X[n, "decoyPosition"] + Beta["A", "betaBaseline"] * X[n, "intercept"]#
+#
+   ## lambda.b <- (subAdj[X[n, "id"]] + itemAdj[X[n, "item"]] + Beta["B", "betaDecoy"]) * X[n, "decoyPosition"] + Beta["B", "betaBaseline"] * X[n, "intercept"]#
+#
+    lambda.d <- Beta["D","betaDecoy"] * X[n, "decoyPosition"] + Beta["D", "betaBaseline"] * X[n, "intercept"]#
+    lambda.a <- (subAdj[X[n, "id"]] + itemAdj[X[n, "item"]] + Beta["A", "betaDecoy"]) * X[n, "decoyPosition"] + Beta["A", "betaBaseline"] * X[n, "intercept"]#
+    lambda.b <- Beta["B", "betaDecoy"] * X[n, "decoyPosition"] + Beta["B", "betaBaseline"] * X[n, "intercept"]#
+    lambda <- c(lambda.d, lambda.a, lambda.b)#
+    p[n,] <- softmax(lambda)#
+    choices[n] <- sample.int(n = 3, size = 1, replace = TRUE, prob = p[n,])#
+}
+fake.data <- cbind(X, choices)
+colnames(fake.data) <- c("id", "item", "intercept", "decoyPosition", "choice")
+fd <- list(K = K,#
+           N = N,#
+           D = D,#
+           J = J,#
+           M = M,#
+           subject = id,#
+           item = item,#
+           y = choices,#
+           decoyPos = decoyPosition)
+fit <- stan(file = '3dilemma.model.stan',#
+            data = fd)
+library(rstan)#
+library(extrafont)#
+loadfonts()#
+#
+rstan_options(auto_write = TRUE)#
+options(mc.cores = parallel::detectCores())#
+#
+library(shinystan)#
+library(ggplot2)#
+library(dplyr)#
+#
+# between subject variable: presentation format (interactive, static)#
+# within subject variable: level of social distancing (4)#
+#
+# Y_i = beta_{intercept} + beta_{format} * X_{i,format} + beta_{level} * X_{i, level} + beta_{format*level}*X_{i,format}*X_{i,level}#
+#
+# Constraint #
+transform <- function(x) {#
+	y <- 10 *(1/ (1+ exp(x)))#
+	return(y)#
+}#
+#
+# Let's try to simulate some data#
+set.seed(8675309)#
+K <- 4#
+J <- 50 #number of subjects#
+#
+# format #
+# 0 is static, 1 is interactive#
+format <- sample(c(0,1),J, replace=T)#
+sub.format <- rep(format, each=12)#
+#
+# level#
+sub.level <- rep(rep(1:4, each=3), J)#
+# item #
+item <- rep(1:12, J)#
+#
+# set a baseline#
+# static group rating none social distancing (level 1)#
+#
+# let's assume some intercept value #
+beta.gm <- 5#
+beta.gm.vec <- rep(beta.gm, 4)#
+#
+# let's assume that interactive group has a rating that is lower by 2#
+beta.format <- -2#
+beta.format.vec <- c(0, rep(beta.format, 3))#
+#
+# let's assume that level 4: extensive social distancing #
+# has a rating that is lower by 3#
+beta.level.ext <- -3#
+#
+# level 3: moderate social distancing #
+# has a rating that is lower by 1#
+beta.level.mod <- -1#
+#
+# level 2: minor social distancing#
+# has a rating that is lower by 0.2#
+beta.level.min <- -0.2#
+#
+beta.level.vec <- c(0, beta.level.min, beta.level.mod, beta.level.ext)#
+#
+# specify betas for interactions#
+beta.format.level.min <-  -0.1#
+beta.format.level.mod <- -0.1#
+beta.format.level.ext <- -0.1
+beta.interactions.vec <- c(0, beta.format.level.min, beta.format.level.mod, beta.format.level.ext)
+Beta <- as.matrix(cbind(beta.gm.vec, beta.format.vec, beta.level.vec, beta.interactions.vec))
+data <- cbind(rep(1, length(sub.format)), sub.format, sub.level)
+y <- rep(NA, nrow(data))
+sub.format * sub.level
+data <- cbind(rep(1, length(sub.format)), sub.format, sub.level, sub.format*sub.level)
+y <- rep(NA, nrow(data))
+for(i in 1:nrow(data)) {#
+	y[i] <- transform(Beta[data[i,3],] %*% data[i,] + rnorm(1, 0,1))#
+}#
+#
+N <- length(y)
+df <- cbind.data.frame(data, item, y)#
+colnames(df) <- c('intercept', 'format', 'level', 'item','rating')#
+head(df)
+gp <- ggplot(df, aes(x=rating)) +#
+      geom_histogram(fill='black') +#
+      facet_grid(as.factor(item) ~ .)
+gp
+df <- cbind.data.frame(data, item, y)
+colnames(df) <- c('intercept', 'format', 'level', 'interaction', 'item','rating')
+head(df)
+gp <- ggplot(df, aes(x=rating)) +#
+      geom_histogram(fill='black') +#
+      facet_grid(as.factor(item) ~ .)
+gp
+fd <- list(K = K, N = N, y = y, format = sub.format, level = sub.level)
+setwd("~/Documents/GitHub/COVID-19-simulations/replication")
+fit <- stan(file='model.stan',#
+            data=fd,#
+            warmup = 800,#
+            iter = 2000,#
+            chains = 4)
+rm(list=ls())
+remove.packages("rstan")
+system.file("libs", package = "rstan")
+install.packages('rstan')
+library(rstan)#
+library(extrafont)#
+loadfonts()#
+#
+rstan_options(auto_write = TRUE)#
+options(mc.cores = parallel::detectCores())#
+#
+library(shinystan)#
+library(ggplot2)#
+library(dplyr)#
+#
+# between subject variable: presentation format (interactive, static)#
+# within subject variable: level of social distancing (4)#
+#
+# Y_i = beta_{intercept} + beta_{format} * X_{i,format} + beta_{level} * X_{i, level} + beta_{format*level}*X_{i,format}*X_{i,level}#
+#
+# Constraint #
+transform <- function(x) {#
+	y <- 10 *(1/ (1+ exp(x)))#
+	return(y)#
+}#
+#
+# Let's try to simulate some data#
+set.seed(8675309)#
+K <- 4#
+J <- 50 #number of subjects#
+#
+# format #
+# 0 is static, 1 is interactive#
+format <- sample(c(0,1),J, replace=T)#
+sub.format <- rep(format, each=12)#
+#
+# level#
+sub.level <- rep(rep(1:4, each=3), J)#
+# item #
+item <- rep(1:12, J)#
+#
+# set a baseline#
+# static group rating none social distancing (level 1)#
+#
+# let's assume some intercept value #
+beta.gm <- 5#
+beta.gm.vec <- rep(beta.gm, 4)#
+#
+# let's assume that interactive group has a rating that is lower by 2#
+beta.format <- -2#
+beta.format.vec <- c(0, rep(beta.format, 3))#
+#
+# let's assume that level 4: extensive social distancing #
+# has a rating that is lower by 3#
+beta.level.ext <- -3#
+#
+# level 3: moderate social distancing #
+# has a rating that is lower by 1#
+beta.level.mod <- -1#
+#
+# level 2: minor social distancing#
+# has a rating that is lower by 0.2#
+beta.level.min <- -0.2#
+#
+beta.level.vec <- c(0, beta.level.min, beta.level.mod, beta.level.ext)#
+#
+# specify betas for interactions#
+beta.format.level.min <-  -0.1#
+beta.format.level.mod <- -0.1#
+beta.format.level.ext <- -0.1 #
+beta.interactions.vec <- c(0, beta.format.level.min, beta.format.level.mod, beta.format.level.ext)#
+Beta <- as.matrix(cbind(beta.gm.vec, beta.format.vec, beta.level.vec, beta.interactions.vec))#
+#
+data <- cbind(rep(1, length(sub.format)), sub.format, sub.level, sub.format*sub.level)#
+#
+y <- rep(NA, nrow(data))#
+for(i in 1:nrow(data)) {#
+	y[i] <- transform(Beta[data[i,3],] %*% data[i,] + rnorm(1, 0,1))#
+}#
+#
+N <- length(y)#
+# uninormal
+fd <- list(K = K, N = N, y = y, format = sub.format, level = sub.level)
+setwd("~/Documents/GitHub/COVID-19-simulations/replication")
+fit <- stan(file='model.stan',#
+            data=fd,#
+            warmup = 800,#
+            iter = 2000,#
+            chains = 4)
+rm(list=ls())
+remove.packages('rstan')
+install.packages("rstan", type = "source")
+rm(list=ls())
+remove.packages("rstan")
+install.packages("Rcpp", repos = "https://rcppcore.github.io/drat")
