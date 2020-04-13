@@ -20,6 +20,7 @@ parameters {
 	real betaFExt;
  		
  	real sigma; // error
+ 	real error;
 }
 
 transformed parameters {
@@ -64,8 +65,8 @@ model {
 	error ~ normal(0, sigma);
 	
 	for(n in 1:N) {
-		row = level[n];
-		y[n] ~ 10 * inv_logit(beta[row, 2] * format[n] + beta[row, 3] * level[n] + beta[row, 4] * format[n] * level[n] + beta[row, 1] + error);  
+		int r = level[n];
+		y[n] ~ inv_logit(beta[r, 2] * format[n] + beta[r, 3] * level[n] + beta[r, 4] * format[n] * level[n] + beta[r, 1] + error);  
 	}	
 }
 

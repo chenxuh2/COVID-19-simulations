@@ -16,7 +16,7 @@ library(dplyr)
 
 # Constraint 
 transform <- function(x) {
-	y <- 10 *(1/ (1+ exp(x)))
+	y <- 1/ (1+ exp(x))
 	return(y)
 }
 
