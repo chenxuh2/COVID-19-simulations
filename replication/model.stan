@@ -1,9 +1,10 @@
 data {
-	int<lower=2> K;                                        // number of levels
-	int<lower=0> N;                                       // number of data points
-	int<lower=0, upper=10> y[N];               // rating 
-	int<lower=0, upper=1> format[N];       // presentation format
-	int<lower=1, upper=K> level[N];           // social distancing levels
+	int<lower=2> K;  // number of levels
+	int<lower=2> D;  // number of response types    
+	int<lower=0> N;  // number of data points
+	//int<lower=0, upper=10> y[N];  // rating 
+	int<lower=0, upper=1> format[N];  // presentation format
+	int<lower=1, upper=K> level[N];   // social distancing levels
 }
 
 parameters {
@@ -21,6 +22,7 @@ parameters {
  		
  	real sigma; // error
  	real error;
+ 	ordered[D-1] c;
 }
 
 transformed parameters {
@@ -64,10 +66,17 @@ model {
 	sigma ~ normal(0, 1);
 	error ~ normal(0, sigma);
 	
-	for(n in 1:N) {
-		int r = level[n];
-		y[n] ~ inv_logit(beta[r, 2] * format[n] + beta[r, 3] * level[n] + beta[r, 4] * format[n] * level[n] + beta[r, 1] + error);  
-	}	
+	//for(n in 1:N) {
+	//	int r = level[n];
+	//	y[n] ~ ordered_logistic(beta[r, 2] * format[n] + beta[r, 3] * level[n] + beta[r, 4] * format[n] * level[n] + beta[r, 1] + error, c);  
+	//}	
+}
+generated quantities{
+  int<lower=1, upper=10> y_fd[N];
+  for(n in 1:N) {
+    int r = level[n];
+    y_fd[n] = ordered_logistic_rng(beta[r, 2] * format[n] + beta[r, 3] * level[n] + beta[r, 4] * format[n] * level[n] + beta[r, 1] + error, c);  
+  }
 }
 
 

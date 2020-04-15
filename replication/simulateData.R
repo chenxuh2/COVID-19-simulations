@@ -95,7 +95,7 @@ df <- as.data.frame(df)
 df$format <- as.factor(df$format)
 df$level <- as.factor(df$level)
 
-fd <- list(K = K, N = N, y = y, format = sub.format, level = sub.level)
+fd <- list(K = K, D = 10, N = N, format = sub.format, level = sub.level)
 
 setwd("~/Documents/GitHub/COVID-19-simulations/replication")
 fit <- stan(file='model.stan',
